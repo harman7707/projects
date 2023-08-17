@@ -34,8 +34,16 @@ public class TrainerDaoImpl implements TrainerDao {
 
 	@Override
 	public int updateTrainer(Trainer trainer) {
-		// TODO Auto-generated method stub
-		return 0;
+		String updateQuery = "UPDATE trainer"
+				+ " SET trainerName= ?, qualification = ?,"
+				+ " trainerDescription =?, year_of_exp = ? "
+				+ "WHERE trainerId = ?";
+		return this.jdbcTemplate.update(updateQuery,
+				trainer.getTrainerName(),
+				trainer.getQualification(), 
+				trainer.getTrainerDescription(),
+				trainer.getYear_of_exp(), 
+				trainer.getTrainerId());
 	}
 
 	@Override

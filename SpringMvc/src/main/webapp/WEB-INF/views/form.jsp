@@ -37,7 +37,7 @@
 				<td></td>
 				<td><input type="reset" value="Reset" /> <input id="submit"
 					type="submit" value="Submit" />
-					<a href="update">Update</a></td>
+					
 			</tr>
 		</table>
 	</form>

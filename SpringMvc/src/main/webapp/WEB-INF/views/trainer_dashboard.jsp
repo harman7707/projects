@@ -1,5 +1,5 @@
 <%@page import="java.util.Base64"%>
-<%@page import="trainer.crud.app.entities.Trainer"%>
+<%@page import="spring.mvc.entities.Trainer"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>trainer Dashboard</title>
+<title>Trainer Dashboard</title>
 
 <style>
 	table, th, td {
@@ -79,25 +79,17 @@
 		<tr>
 			<td><%= trainer.getTrainerId() %></td>
 			<td><%= trainer.getTrainerName() %></td>
-			<td><%= trainer.getQualification()%></td>
-			<td><%= trainer.getTrainerDesc()%></td>
+			<td><%= trainer.getQualification() %></td>
+			<td><%= trainer.getTrainerDescription() %></td>
+			<td><%= trainer.getYear_of_exp()%></td>
+			<td><a herf ="<%= request.getContextPath() %>/update/<%=trainer.getTrainerId() %>">Update</a>
+			<td><a herf ="<%= request.getContextPath() %>/delete/<%=trainer.getTrainerId() %>">Delete</a>
 			
-			
-			
-			
-			
-			<td><%= trainer.getyear_of_exp()%></td>
-			<td>
-				<a href="<%= application.getContextPath() %>/trainer/delete/<%= trainer.getTrainerId()%>">Delete</a>
-				<a href="<%= application.getContextPath() %>/openUpdateBookPage/<%= trainer.getTrainerId()%>">Update</a>
-			</td>
 		
 		</tr>
 		<%} %>
 		
-		<tr>
-			<td colspan = "8" style="padding:10px;text-align:center"><a href="openAddBookPage">Add Book</a></td>	
-		</tr>
+	
 	</table>
 	
 	<p>

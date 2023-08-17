@@ -8,5 +8,12 @@
 </head>
 <body>
 	<h1>This is home page</h1>
+	
+	<p>
+        
+        <a href="openForm">open Form for insert</a>
+</p>
+
+<button><a href="viewTrainer">View Course</a></button>
 </body>
 </html>
